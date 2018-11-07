@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/FrontEndCapstone/DanielSockwellProxyServer/issues"
   },
-  "homepage": "https://github.com/FrontEndCapstone/DanielSockwellProxyServer#readme"
+  "homepage": "https://github.com/FrontEndCapstone/DanielSockwellProxyServer#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
 }
