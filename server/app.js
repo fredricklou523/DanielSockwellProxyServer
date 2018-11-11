@@ -10,7 +10,7 @@ app.use((req, res, next) => {
   );
   next();
 });
-app.use(express.static(`${__dirname}./../client/dist`));
+app.use(express.static(`${__dirname}../../dist`));
 
 app.get('/product/:productId', (req, res) => {
   if (req.params.productId === 'random') {
