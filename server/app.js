@@ -10,14 +10,14 @@ app.use((req, res, next) => {
   );
   next();
 });
-app.use((req, res, next) => console.log('hit use') || next(), express.static(`${__dirname}/../public`));
+app.use(express.static(`${__dirname}./../../dist`));
 
 app.get('/product/:productId', (req, res) => {
   if (req.params.productId === 'random') {
     res.redirect(`/product/${Math.floor(Math.random() * 100) + 1}`);
   } else {
     const options = { headers: { 'Content-Type': 'text/html' } };
-    const file = path.join(`${__dirname}/../public/index.html`);
+    const file = path.join(`${__dirname}./../index.html`);
     console.log('file is', file);
     res.sendFile(file, options);
   }
